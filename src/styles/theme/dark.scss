@@ -1,0 +1,98 @@
+$navbar_color: rgb(41, 41, 41);
+$background_dark: rgb(20, 20, 20);
+
+$white_color: #fff;
+
+#app .app.dark {
+
+  > header, .ant-upload.ant-upload-drag {
+    background: $navbar_color;
+  }
+
+  > header {
+    border-bottom: 1px solid rgba(0, 0, 0, .8);
+    
+    .logo {
+
+      a {
+        color: $white_color;
+      }
+    }
+
+    .theme-button {
+      border-color: rgba(255, 255, 255, .3);
+    }
+  }
+
+  > main {
+    background: $background_dark;
+  }
+
+  > main {
+
+    .cloud-storage {
+      color: $white_color;
+
+      aside {
+
+        div {
+
+          &:nth-child(2n) {
+            background: rgba(0, 0, 0, 0.8);
+          }
+
+          span {
+            color: $white_color;
+          }
+        }
+      }
+
+      .cloud-storage-form .ant-form-item-label label {
+        color: $white_color;
+      }
+    }
+
+    > div div:nth-of-type(3) {
+
+      > div {
+        background: $navbar_color !important;
+      }
+    }
+  }
+
+  .ant-menu-horizontal {
+    border-bottom: none;
+  }
+
+  .ant-upload.ant-upload-drag p.ant-upload-text, .theme-button {
+    color: #f1f8fd;
+  }
+
+  .ant-menu-horizontal > .ant-menu-item > a {
+    color: #d6d6d6;
+  }
+
+  .ant-upload.ant-upload-drag p.ant-upload-hint {
+    color: #d6d6d6;
+  }
+
+  .picture-list {
+
+    > div {
+      background: #1d1a1a;
+      box-shadow: 0 5px 30px rgba(255, 255, 255, .1);
+
+      @media (max-width: 600px) {
+        box-shadow: 0 5px 30px rgba(255, 255, 255, .2);
+      }
+    }
+  }
+
+  + div {
+
+    .ant-message-notice-content {
+      background: $navbar_color;
+      color: #d6d6d6;
+    }
+  }
+}

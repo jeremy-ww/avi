@@ -1,0 +1,39 @@
+.loader {
+  position: relative;
+  display: flex;
+  width: 100%;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 9999;
+    user-select: none;
+  }
+
+  .triangle {
+    stroke-dasharray: 17;
+    animation: dash 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+  }
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 136;
+    }
+  }
+
+  .uploading {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 7px;
+    animation: blink .9s ease-in-out infinite alternate;
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+}

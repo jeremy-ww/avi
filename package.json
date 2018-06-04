@@ -1,0 +1,53 @@
+{
+  "name": "avi",
+  "version": "0.0.0",
+  "description": "The easiest way to upload images, Compatible with numerous cloud storage.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "poi",
+    "lint": "eslint . --ext .js,.jsx",
+    "build": "rm -rf dist/ && poi build && cp CNAME dist/",
+    "docs:deploy": "npm run build && cp -r .circleci dist/ && gh-pages -d dist",
+    "postversion": "npm run docs:deploy"
+  },
+  "keywords": [],
+  "author": "Army-U <wuchengkai0@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "8.2.3",
+    "babel-plugin-import": "1.6.7",
+    "eslint": "4.19.1",
+    "eslint-config-standard": "11.0.0",
+    "eslint-config-standard-react": "6.0.0",
+    "eslint-plugin-import": "2.12.0",
+    "eslint-plugin-node": "6.0.1",
+    "eslint-plugin-promise": "3.8.0",
+    "eslint-plugin-react": "7.9.1",
+    "eslint-plugin-standard": "3.1.0",
+    "gh-pages": "1.2.0",
+    "node-sass": "4.8.3",
+    "poi": "9.6.13",
+    "poi-preset-react": "9.2.1",
+    "react": "16.4.0",
+    "react-dom": "16.4.0",
+    "sass-loader": "6.0.7",
+    "sw-precache-webpack-plugin": "0.11.5"
+  },
+  "dependencies": {
+    "antd": "3.4.0",
+    "axios": "0.18.0",
+    "clipboard-polyfill": "2.4.7",
+    "i18next": "11.3.2",
+    "i18next-browser-languagedetector": "2.2.0",
+    "i18next-xhr-backend": "1.5.1",
+    "lodash": "4.17.10",
+    "normalize.css": "8.0.0",
+    "prop-types": "15.6.1",
+    "react-custom-scrollbars": "4.2.1",
+    "react-i18next": "7.7.0",
+    "react-lazy-load": "3.0.13",
+    "react-router-dom": "4.2.2",
+    "sewing": "0.0.45",
+    "vue-localstorage2": "0.0.4"
+  }
+}

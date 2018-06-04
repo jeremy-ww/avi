@@ -1,0 +1,23 @@
+.records {
+  margin: 0 auto;
+  padding: 3% 15% 0;
+  display: flex;
+  min-height: 100%;
+
+  .picture-list img {
+    max-height: 300px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 5%;
+  }
+
+  > p.empty {
+    flex: 1;
+    text-align: center;
+    align-self: center;
+    font-size: 20px;
+    font-weight: 200;
+    color: #444;
+  }
+}

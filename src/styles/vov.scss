@@ -1,0 +1,14 @@
+.vov {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+
+  .picture-list > div {
+    height: 60%;
+  }
+
+  .LazyLoad {
+    height: 100% !important;
+  }
+}
