@@ -12,16 +12,16 @@ self.__precacheManifest = [
     "url": "/vov/vendor.3b918fd2.css"
   },
   {
-    "revision": "d7d0dc8d57b341e9058c47e54ba23b79",
+    "revision": "9488d6658ae0b874379657a0000d5878",
     "url": "/vov/index.html"
   },
   {
-    "revision": "18c5949af827dcf8af14",
+    "revision": "47a5f67f2fd4ef15b62c",
     "url": "/vov/client.f61bcfc6.css"
   },
   {
-    "revision": "18c5949af827dcf8af14",
-    "url": "/vov/client.18c5949a.js"
+    "revision": "47a5f67f2fd4ef15b62c",
+    "url": "/vov/client.47a5f67f.js"
   },
   {
     "revision": "0bd90e97b5e6db764d2641afa78739ac",
