@@ -1,4 +1,5 @@
 "use strict";
+console.log('启动 sw')
 var precacheConfig = [["/404.html", "d2e45d0707e37c276ac21686aa5fcdc0"], ["/assets/images/aws.9f669c21.png",
   "9f669c219265599151cf5e97e9b505c3"], ["/assets/images/default.391cb92c.svg",
   "391cb92c37f50780858a2a07643f6a03"], ["/assets/images/flickr.affdf736.jpg",
