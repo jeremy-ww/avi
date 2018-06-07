@@ -1,0 +1,32 @@
+{
+  "title": "Avi - The easiest way to upload images, Compatible with numerous cloud storage.",
+  "menu": {
+    "home": "Home",
+    "records": "Records",
+    "setting": "Setting",
+    "theme": {
+      "label": "Theme",
+      "dark": "Dark",
+      "light": "Light"
+    }
+  },
+  "home": {
+    "title": "Click or drag image to this area to upload",
+    "description": "Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files"
+  },
+  "setting": {
+    "cloud": {
+      "tips": "The picture will be uploaded to the sm.ms cloud storage by default.",
+      "resource": "Resource",
+      "prefix": "Website Prefix",
+      "default": "default",
+      "qiniu": "Qiniu Cloud",
+      "upyun": "Upyun Cloud",
+      "aliyun": "Aliyun OSS",
+      "tencent": "Tecent COS",
+      "aws": "Amazon S3",
+      "imgur": "Imgur",
+      "flickr": "Flickr"
+    }
+  }
+}
