@@ -1,0 +1,35 @@
+{
+  "title": "Avi - 支持多种云存储的上传工具.",
+  "menu": {
+    "home": "主页",
+    "records": "记录",
+    "setting": "设置",
+    "theme": {
+      "label": "主题",
+      "dark": "夜间",
+      "light": "明亮"
+    }
+  },
+  "home": {
+    "title": "点击或者拖拽图片到此处上传",
+    "description": "支持右键粘贴文件或者图片链接方式上传, 请勿上传公司或者其他隐私图片"
+  },
+  "records": {
+    "empty": "看起来, 这里空无一物"
+  },
+  "setting": {
+    "cloud": {
+      "tips": "图片默认存储在 sm.ms 的云存储上",
+      "resource": "资源",
+      "prefix": "网址前缀",
+      "default": "默认",
+      "qiniu": "七牛云",
+      "upyun": "又拍云",
+      "aliyun": "阿里云 OSS",
+      "tencent": "腾讯云 COS",
+      "aws": "亚马逊 S3",
+      "imgur": "Imgur",
+      "flickr": "Flickr"
+    }
+  }
+}

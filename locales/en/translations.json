@@ -12,11 +12,14 @@
   },
   "home": {
     "title": "Click or drag image to this area to upload",
-    "description": "Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files"
+    "description": "Supports right-pasting files or image link uploads. Please do not upload company or other privacy images"
+  },
+  "records": {
+    "empty": "Emmmm, Here is the barrens"
   },
   "setting": {
     "cloud": {
-      "tips": "The picture will be uploaded to the sm.ms cloud storage by default.",
+      "tips": "The picture will be uploaded to the sm.ms cloud storage by default",
       "resource": "Resource",
       "prefix": "Website Prefix",
       "default": "default",
