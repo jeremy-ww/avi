@@ -31,5 +31,12 @@
       "imgur": "Imgur",
       "flickr": "Flickr"
     }
+  },
+  "copy": {
+    "copied": "已复制",
+    "error": "复制 URL 失败, 必须要手动点击图片才可以复制"
+  },
+  "upload": {
+    "tips": "上传中"
   }
 }

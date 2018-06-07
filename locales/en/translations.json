@@ -31,5 +31,12 @@
       "imgur": "Imgur",
       "flickr": "Flickr"
     }
+  },
+  "copy": {
+    "copied": "Copied",
+    "error": "Copy url failed, must click on the picture manually"
+  },
+  "upload": {
+    "tips": "Uploading"
   }
 }
