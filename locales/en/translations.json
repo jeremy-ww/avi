@@ -34,7 +34,11 @@
   },
   "copy": {
     "copied": "Copied",
-    "error": "Copy url failed, must click on the picture manually"
+    "failure": {
+      "title": "Copy failed",
+      "description": "Insufficient permissions, Must manually click on the picture to complete the copy url"
+    },
+    "error": "Copy url failed, Must manually click on the picture to complete the copy url"
   },
   "upload": {
     "tips": "Uploading"
