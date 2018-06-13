@@ -5,13 +5,13 @@ class GithubPagesWebpackPlugin {
   apply (compiler) {
     compiler.plugin('emit', (compilation, callback) => {
       compilation.assets['404.html'] = compilation.assets['index.html']
-      console.log(process.env)
       callback()
     })
   }
 }
 
 module.exports = (options, req) => ({
+  port: 80,
   entry: './src/main.js',
   env: {
     RELEASE_TIME: Date.now()

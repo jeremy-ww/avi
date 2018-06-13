@@ -1,9 +1,12 @@
 import { render } from 'react-dom'
+import auth from './utils/auth'
 import { message } from 'antd'
 import React from 'react'
 import './utils/i18next'
 import App from './App'
 import 'normalize.css'
+
+auth()
 
 const app = document.getElementById('app')
 

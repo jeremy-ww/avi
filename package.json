@@ -10,7 +10,10 @@
     "docs:deploy": "npm run build && cp -r .circleci dist/ && gh-pages -d dist",
     "postversion": "npm run docs:deploy"
   },
-  "keywords": [],
+  "keywords": [
+    "figure-bed",
+    "screenshots"
+  ],
   "author": "Army-U <wuchengkai0@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -36,7 +39,9 @@
   "dependencies": {
     "antd": "3.4.0",
     "axios": "0.18.0",
+    "classnames": "2.2.6",
     "clipboard-polyfill": "2.4.7",
+    "firebase": "5.0.4",
     "i18next": "11.3.2",
     "i18next-browser-languagedetector": "2.2.0",
     "i18next-xhr-backend": "1.5.1",

@@ -3,6 +3,7 @@ import VovDragger from '../components/VovDragger'
 import Loading from '../components/Loading'
 import isBlobURL from '../utils/isBlobURL'
 import Snag from '../components/Snag'
+import classNames from 'classnames'
 import token from '../utils/token'
 import '../styles/vov.scss'
 import React from 'react'
@@ -50,7 +51,7 @@ export default class Vov extends React.Component {
     return (
       <section className="vov">
         <VovDragger
-          className={picture ? 'hidden' : ''}
+          className={classNames({ 'hidden': picture })}
           replacePictureURL={replacePictureURL}
           storeUploadCancel={storeUploadCancel}
           setPicture={setPicture} />

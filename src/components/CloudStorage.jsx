@@ -1,7 +1,11 @@
 import { WrappedCloudStorageForm as CloudStorageForm } from '../components/CloudStorageForm'
+import { firebase } from '../utils/auth'
+import { Button, message } from 'antd'
 import '../styles/cloud-storage.scss'
+import notice from '../utils/notice'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import { Button } from 'antd'
+import { t } from 'i18next'
 import React from 'react'
 
 function GrantAuthorizationButton (props) {
@@ -50,43 +54,75 @@ const CLOUD_LIST = [
   {
     icon: require('../statics/aws.png'),
     name: 'Amazon S3',
-    component: <CloudStorageForm placeholder="AWS"></CloudStorageForm>
+    component: <CloudStorageForm placeholder="AWS"></CloudStorageForm>,
+    disable: true
   },
   {
     icon: require('../statics/imgur.jpg'),
     name: 'Imgur',
-    component: GrantAuthorizationButton({ account: 'Imgur' })
+    component: GrantAuthorizationButton({ account: 'Imgur' }),
+    disable: true
   },
   {
     icon: require('../statics/flickr.jpg'),
     name: 'Flickr',
-    component: GrantAuthorizationButton({ account: 'Flickr' })
+    component: GrantAuthorizationButton({ account: 'Flickr' }),
+    disable: true
   }
 ]
+
+const CloudList = function ({ component, disable, icon, name }, toggleCloudStorageForm) {
+  return (
+    <div
+      onClick={() => { toggleCloudStorageForm(component) }}
+      className={classNames({ disable })}
+      key={name}>
+      <img src={icon} alt={name} />
+      <span>{name}</span>
+    </div>
+  )
+}
+
+CloudList.propTypes = {
+  component: PropTypes.object,
+  disable: PropTypes.bool,
+  icon: PropTypes.string,
+  name: PropTypes.string
+}
 
 export default class CloudStorage extends React.Component {
   state = {
     component: CLOUD_LIST[0].component
   }
+
   toggleCloudStorageForm = component => {
     this.setState({ component })
   }
+
+  auth = () => {
+    // 要在 mobx 中存储 token 信息
+    const provider = new firebase.auth.GoogleAuthProvider()
+    firebase.auth().signInWithPopup(provider).then(result => {
+      firebase.auth().currentUser.getIdToken(true).then(token => {
+        console.log(token)
+      })
+    }, err => {
+      if (err) {
+        notice({ title: t('auth.error') }, function () {
+          message.error(t('auth.error'))
+        })
+      }
+    })
+  }
+
   render () {
+    const { toggleCloudStorageForm, auth } = this
     return (
-      <section className="cloud-storage">
+      <section
+        className={classNames('cloud-storage', { 'no-auth': true })}
+        onClick={auth}>
         <aside>
-          {
-            CLOUD_LIST.map(({ icon, name, component }, key) => {
-              return (
-                <div
-                  onClick={() => { this.toggleCloudStorageForm(component) }}
-                  key={key}>
-                  <img src={icon} alt={name} />
-                  <span>{name}</span>
-                </div>
-              )
-            })
-          }
+          {CLOUD_LIST.map(cloud => CloudList(cloud, toggleCloudStorageForm))}
         </aside>
         <main>
           {this.state.component}

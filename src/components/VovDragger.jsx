@@ -2,6 +2,7 @@ import { translate } from 'react-i18next'
 import upload from '../utils/upload'
 import source from '../utils/source'
 import '../styles/vov-dragger.scss'
+import classNames from 'classnames'
 import { Upload, Icon } from 'antd'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -32,11 +33,11 @@ export default class VovDragger extends React.Component {
   }
 
   render () {
-    const { props: { t } } = this
+    const { props: { t, className } } = this
     return (
       <Dragger
         customRequest={this.customRequest}
-        className={`${this.props.className} vov-dragger`}
+        className={classNames('vov-dragger', className)}
         listType="picture"
         showUploadList={false}
         accept="image/gif, image/jpeg, image/jpg, image/png">

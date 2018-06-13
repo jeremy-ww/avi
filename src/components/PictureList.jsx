@@ -1,6 +1,7 @@
 import isBlobURL from '../utils/isBlobURL'
 import LazyLoad from 'react-lazy-load'
 import '../styles/picture-list.scss'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import copy from '../utils/copy'
 import { Icon } from 'antd'
@@ -26,7 +27,7 @@ export default class PictureList extends React.Component {
   render () {
     const { props: { pictures, grid, children, remove }, removePictureByKey, handleCopyImageUrl } = this
     return (
-      <section className={`picture-list ${grid ? 'grid' : ''}`}>
+      <section className={classNames('picture-list', { grid })}>
         {pictures.map(({ url, blob, token }) => {
           return (
             <div key={token}>
