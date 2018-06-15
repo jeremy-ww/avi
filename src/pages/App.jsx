@@ -1,15 +1,22 @@
 import { BrowserRouter as Router, Route, Switch, Link, withRouter } from 'react-router-dom'
 import { Scrollbars } from 'react-custom-scrollbars'
 import { searchString2Map, isEmpty } from 'sewing'
+import { Provider, observer } from 'mobx-react'
 import { translate } from 'react-i18next'
 import { Menu, Icon, Button } from 'antd'
-import Records from './pages/Records'
-import Setting from './pages/Setting'
+import storage from '../utils/storage'
+import upload from '../stores/upload'
+import Snag from '../components/Snag'
+import token from '../utils/token'
 import PropTypes from 'prop-types'
-import './styles/theme/dark.scss'
-import Vov from './pages/Vov'
+import '../styles/theme/dark.scss'
+import user from '../stores/user'
+import Cookies from 'js-cookie'
+import Records from './Records'
+import Setting from './Setting'
+import '../styles/app.scss'
 import React from 'react'
-import './app.scss'
+import Vov from './Vov'
 
 @withRouter
 class AppMenu extends React.Component {
@@ -25,6 +32,7 @@ class AppMenu extends React.Component {
     const selectedKeys = [location.pathname.match(/\/[^/]*/g)[0]]
     const { lng } = searchString2Map(location.search)
     const queryString = !isEmpty(lng) ? `?lng=${lng}` : ''
+    Cookies.set('lng', lng, { domain: '.avi.run' })
 
     return (
       <header>
@@ -73,44 +81,83 @@ class AppMenu extends React.Component {
   }
 }
 
+@withRouter
+class SnagHOC extends React.Component {
+  static propTypes = {
+    history: PropTypes.object
+  }
+
+  state = {
+    token: undefined
+  }
+
+  setPicture = blob => {
+    this.props.history.push({
+      pathname: '/',
+      search: location.search
+    })
+    upload.clear()
+    upload.onRemovePicture(this.state.token)
+    this.setState({ token: token.token })
+    upload.setPicture(this.state.token, blob)
+  }
+
+  render () {
+    const { state: { token } } = this
+    return (
+      <Snag
+        setPicture={this.setPicture}
+        storeUploadCancel={cancel => { upload.storeUploadCancel(token, cancel) }}
+        replacePictureURL={url => { upload.replacePictureURL(token, url) }} />
+    )
+  }
+}
+
 @translate(['translations'])
+@observer
 export default class App extends React.Component {
   static propTypes = {
     t: PropTypes.func
   }
 
   state = {
-    theme: 'dark',
+    theme: storage.get('theme', 'light'),
     themes: ['dark', 'light']
   }
 
   toggleTheme = theme => {
     const { themes } = this.state
     const index = themes.findIndex(v => v === theme) + 1
-    this.setState({ theme: themes[index >= themes.length ? 0 : index] })
+    const patch = themes[index >= themes.length ? 0 : index]
+    this.setState({ theme: patch })
+    storage.set('theme', patch)
   }
 
   render () {
     const { state: { theme }, props: { t } } = this
     return (
-      <Router>
-        <section className={`app ${theme}`}>
-          <AppMenu
-            toggleTheme={this.toggleTheme}
-            theme={theme}
-            t={t} />
+      <Provider user={user}>
+        <Router>
+          <section className={`app ${theme}`}>
+            <AppMenu
+              toggleTheme={this.toggleTheme}
+              theme={theme}
+              t={t} />
 
-          <main>
-            <Scrollbars>
-              <Switch>
-                <Route exact path="/" component={Vov} />
-                <Route path="/records" component={Records} />
-                <Route path="/setting" component={Setting} />
-              </Switch>
-            </Scrollbars>
-          </main>
-        </section>
-      </Router>
+            <main>
+              <Scrollbars>
+                <Switch>
+                  <Route exact path="/" component={Vov} />
+                  <Route path="/records" component={Records} />
+                  <Route path="/setting" component={Setting} />
+                </Switch>
+              </Scrollbars>
+            </main>
+
+            <SnagHOC />
+          </section>
+        </Router>
+      </Provider>
     )
   }
 }

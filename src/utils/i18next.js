@@ -11,6 +11,10 @@ i18n
     fallbackLng: 'en',
     load: 'languageOnly',
 
+    backend: {
+      loadPath: `/locales/{{lng}}/{{ns}}.${process.env.RELEASE_TIME}.json`
+    },
+
     ns: ['translations'],
     defaultNS: 'translations',
 

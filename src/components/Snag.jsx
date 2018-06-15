@@ -33,15 +33,22 @@ export default class Snag extends React.Component {
     this.props.setPicture(blob)
     this.state.cancel = cancel
     this.props.storeUploadCancel(cancel)
-    const { url } = await upload(file, { cancelToken: token })
-    this.props.replacePictureURL(url)
+    try {
+      const { url } = await upload(file, { cancelToken: token })
+      this.props.replacePictureURL(url)
+    } catch (e) {
+      this.props.replacePictureURL('')
+    }
   }
 
   handlePasteEvent = e => {
     const file = get(e, 'clipboardData.files.0', {})
     const { upload } = this
     if (file instanceof File) return upload(file)
-    const url = e.clipboardData.getData('Text')
+    const urlMaybeDefectProtocol = e.clipboardData.getData('Text')
+    const url = /^(https?:)?\/\/[^/]/.test(urlMaybeDefectProtocol)
+      ? urlMaybeDefectProtocol
+      : ('http://' + urlMaybeDefectProtocol)
     isImage(url).then(upload.bind(this, url), noop)
   }
 

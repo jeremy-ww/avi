@@ -23,6 +23,10 @@ html, body {
       > section {
         display: flex;
         align-items: center;
+
+        .ant-menu-horizontal {
+          line-height: 55px;
+        }
       }
 
       @media (max-width: 500px) {
@@ -41,7 +45,7 @@ html, body {
       }
 
       .logo {
-        margin: 13px 0;
+        margin: 0;
         font-size: 20px;
         flex: 1;
 
@@ -76,7 +80,7 @@ html, body {
       }
     }
 
-    main {
+    > main {
       flex: 1;
       overflow-x: hidden;
       overflow-y: auto;

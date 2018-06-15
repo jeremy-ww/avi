@@ -1,3 +1,16 @@
+@import url('https://at.alicdn.com/t/font_736321_zd60ffkgo2p.css');
+
+.iconfont {
+  display: inline-block;
+  font-style: normal;
+  vertical-align: baseline;
+  text-align: center;
+  text-transform: none;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
 .vov {
   position: relative;
   display: flex;
@@ -5,10 +18,24 @@
   height: 100%;
 
   .picture-list > div {
-    height: 60%;
+    max-height: 60%;
+    height: unset !important;
+    overflow: hidden;
   }
 
   .LazyLoad {
-    height: 100% !important;
+    height: unset !important;
+  }
+
+  .picture-list > div img {
+    width: unset !important;
+    height: unset !important;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: unset !important;
+  }
+
+  b, strong {
+    font-weight: bold;
   }
 }

@@ -1,10 +1,11 @@
-import { translate } from 'react-i18next'
+import { translate, Trans } from 'react-i18next'
 import upload from '../utils/upload'
 import source from '../utils/source'
 import '../styles/vov-dragger.scss'
 import classNames from 'classnames'
 import { Upload, Icon } from 'antd'
 import PropTypes from 'prop-types'
+import symbol from '../utils/token'
 import React from 'react'
 
 const { Dragger } = Upload
@@ -20,11 +21,16 @@ export default class VovDragger extends React.Component {
   }
 
   customRequest = ({ file }) => {
-    this.props.setPicture(URL.createObjectURL(file))
-    const { cancel, token } = source()
-    upload(file, { cancelToken: token })
-      .then(({ url }) => { this.props.replacePictureURL(url) })
-    this.props.storeUploadCancel(cancel)
+    const { props: { setPicture, replacePictureURL, storeUploadCancel } } = this
+    const { token } = symbol
+    setPicture(token, URL.createObjectURL(file))
+    const { cancel, token: cancelToken } = source()
+    upload(file, { cancelToken })
+      .then(
+        ({ url }) => { replacePictureURL(token, url) },
+        () => { replacePictureURL(token, '') }
+      )
+    storeUploadCancel(token, cancel)
     return {
       abort () {
         cancel()
@@ -38,9 +44,10 @@ export default class VovDragger extends React.Component {
       <Dragger
         customRequest={this.customRequest}
         className={classNames('vov-dragger', className)}
-        listType="picture"
+        accept="image/gif, image/jpeg, image/jpg, image/png"
         showUploadList={false}
-        accept="image/gif, image/jpeg, image/jpg, image/png">
+        listType="picture"
+        multiple>
         <p className="ant-upload-drag-icon">
           <Icon type="inbox" />
         </p>
@@ -48,7 +55,9 @@ export default class VovDragger extends React.Component {
           {t('home.title')}
         </p>
         <p className="ant-upload-hint">
-          {t('home.description')}
+          <Trans i18nKey="home.description" useDangerouslySetInnerHTML>
+            Supports right-pasting image link or image file uploads. <strong>Please do not upload company or other privacy images</strong>
+          </Trans>
         </p>
       </Dragger>
     )

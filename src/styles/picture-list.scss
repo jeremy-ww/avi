@@ -7,32 +7,42 @@
     position: relative;
     height: 250px;
     background: #fff;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .1);
 
-    &:hover {
+    &:hover, &.ocr {
 
-      .anticon {
+      .anticon, .ocr-button {
         opacity: 1;
         display: unset;
       }
     }
 
-    .anticon {
+    .anticon, .ocr-button {
       position: absolute;
-      right: 0;
-      border: 8px solid transparent;
       mix-blend-mode: difference;
-      font-size: 20px;
       cursor: pointer;
       color: #fff;
       opacity: 0;
       transition: opacity 1s;
+      z-index: 3;
+    }
+
+    .anticon {
+      right: 0;
+      border: 8px solid transparent;
+      font-size: 20px;
+    }
+
+    .ocr-button {
+      right: 35px;
+      border: 9px solid transparent;
+      font-size: 18px;
     }
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      box-shadow: 0 5px 30px rgba(0, 0, 0, .1);
 
       @media (max-width: 600px) {
         object-fit: contain;
@@ -40,6 +50,8 @@
     }
   }
 
+  // There is a bug about `align-items` with iPhone X,
+  // Uncertain responsibility belongs to Chrome simulator or iPhone X.
   &:not(.grid) {
     display: flex;
     align-items: center;
@@ -48,7 +60,6 @@
     > div {
       position: relative;
       max-width: 70%;
-      
 
       @media (max-width: 600px) {
         max-width: 90%;
@@ -69,6 +80,26 @@
 
     > div {
       cursor: pointer;
+    }
+  }
+
+  .ocr-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .4);
+    color: #fff;
+    font-size: 14px;
+    z-index: 2;
+
+    .ocr-container {
+      padding: 20px;
     }
   }
 }

@@ -1,20 +1,25 @@
+import runtime from 'offline-plugin/runtime'
 import { render } from 'react-dom'
-import auth from './utils/auth'
 import { message } from 'antd'
+import App from './pages/App'
 import React from 'react'
 import './utils/i18next'
-import App from './App'
 import 'normalize.css'
+import './stores/user'
 
-auth()
+runtime.install({
+  onUpdateReady () {
+    console.log('update ready')
+    runtime.applyUpdate()
+  },
+
+  onUpdated () {
+    console.log('updated')
+    location.reload()
+  }
+})
 
 const app = document.getElementById('app')
-
-if (process.env.NODE_ENV === 'production') {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js', { scope: './' })
-  }
-}
 
 message.config({
   getContainer: () => app,

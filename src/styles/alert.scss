@@ -1,0 +1,17 @@
+.alert {
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 1px #ccc;
+  font-size: 13px;
+  color: #1890ff;
+
+  i {
+    padding-right: 10px;
+    color: #1890ff;
+  }
+
+  a {
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+}

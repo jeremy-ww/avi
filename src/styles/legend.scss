@@ -1,0 +1,31 @@
+.legend {
+  display: flex;
+  margin: 10px 0;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  > aside, > main {
+    padding: 10px;
+  }
+
+  > aside {
+    width: 120px;
+    font-size: 14px;
+
+    * {
+      color: #444;
+    }
+  }
+
+  > main {
+    flex: 1;
+    padding-top: 40px;
+
+    @media (max-width: 600px) {
+      padding-top: 0;
+    }
+  }
+}

@@ -1,12 +1,20 @@
-$navbar_color: rgb(41, 41, 41);
-$background_dark: rgb(20, 20, 20);
+$navbar_color: rgb(35, 35, 35);
+$background_dark: rgb(18, 18, 18);
 
 $white_color: #fff;
 
 #app .app.dark {
 
-  > header, .ant-upload.ant-upload-drag {
+  .ant-switch {
+    background-color: rgba(189, 168, 168, 0.25);
+  }
+
+  > header {
     background: $navbar_color;
+  }
+
+  .ant-upload.ant-upload-drag {
+    background: $background_dark;
   }
 
   > header {
@@ -37,8 +45,12 @@ $white_color: #fff;
 
         div {
 
+          &.focus {
+            border-color: $white_color;
+          }
+
           &:nth-child(2n) {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(33, 32, 32, 0.8);
           }
 
           span {
@@ -47,16 +59,20 @@ $white_color: #fff;
         }
       }
 
+      main {
+
+        .auth p {
+          color: #ccc;          
+        }
+      }
+
       .cloud-storage-form .ant-form-item-label label {
         color: $white_color;
       }
     }
 
-    > div div:nth-of-type(3) {
-
-      > div {
-        background: $navbar_color !important;
-      }
+    > aside > div:nth-of-type(2n+1) {
+      background: #212124 !important;
     }
   }
 
@@ -79,7 +95,7 @@ $white_color: #fff;
   .picture-list {
 
     > div {
-      background: #1d1a1a;
+      background: #171515;
       box-shadow: 0 5px 30px rgba(255, 255, 255, .1);
 
       @media (max-width: 600px) {
@@ -94,5 +110,17 @@ $white_color: #fff;
       background: $navbar_color;
       color: #d6d6d6;
     }
+  }
+
+  .alert {
+    background-color: #292525;
+  }
+
+  .legend > aside *, .user-info > p, .setting-table > div > div {
+    color: $white_color;
+  }
+
+  .records > p.empty {
+    color: #ffc8c8;
   }
 }

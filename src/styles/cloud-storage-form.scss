@@ -1,6 +1,12 @@
 .cloud-storage-form {
+  padding-left: 10px;
+  width: 100%;
+
+  .save-button {
+    float: right;
+  }
 
   .ant-form-item-label label {
-    padding-right: 20px;
+    padding-right: 10px;
   }
 }

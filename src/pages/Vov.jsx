@@ -1,67 +1,50 @@
 import PictureList from '../components/PictureList'
 import VovDragger from '../components/VovDragger'
 import Loading from '../components/Loading'
-import isBlobURL from '../utils/isBlobURL'
-import Snag from '../components/Snag'
+import upload from '../stores/upload'
+import { observer } from 'mobx-react'
 import classNames from 'classnames'
-import token from '../utils/token'
+import PropTypes from 'prop-types'
 import '../styles/vov.scss'
 import React from 'react'
 
-export default class Vov extends React.Component {
-  state = {
-    picture: undefined,
-    cancel: undefined
-  }
-
-  setPicture = url => {
-    const picture = { [isBlobURL(url) ? 'blob' : 'url']: url, token: token.token }
-    this.setState({ picture })
-  }
-
-  replacePictureURL = url => {
-    this.setState(({ picture }) => {
-      return Object.assign(picture, { url })
-    })
-  }
-
-  storeUploadCancel = cancel => {
-    this.setState({ cancel })
-  }
-
-  onRemovePicture = () => {
-    const { state: { cancel } } = this
-    if (cancel) cancel()
-    this.setState({ picture: undefined })
+@observer
+class Picture extends React.Component {
+  static propTypes = {
+    onRemovePicture: PropTypes.func,
+    token: PropTypes.string
   }
 
   render () {
-    const { state, setPicture, replacePictureURL, onRemovePicture, storeUploadCancel } = this
-    const { picture, picture: { url } = {} } = state
-
-    const Picture = (
-      <Loading loading={!url || url.length === 0}>
+    const { props: { token, onRemovePicture } } = this
+    const { url, blob } = upload.map[token]
+    const isLoading = !url && url !== ''
+    return (
+      <Loading loading={isLoading}>
         <PictureList
-          pictures={[picture]}
+          pictures={[{ url, token, blob }]}
           onRemovePicture={onRemovePicture}
           remove />
       </Loading>
     )
+  }
+}
+
+@observer
+export default class Vov extends React.Component {
+  render () {
+    const { map, replacePictureURL, storeUploadCancel, onRemovePicture } = upload
 
     return (
       <section className="vov">
         <VovDragger
-          className={classNames({ 'hidden': picture })}
+          className={classNames({ 'hidden': Object.keys(map).length })}
           replacePictureURL={replacePictureURL}
           storeUploadCancel={storeUploadCancel}
-          setPicture={setPicture} />
+          setPicture={upload.setPicture} />
 
-        {picture && Picture}
-
-        <Snag
-          setPicture={setPicture}
-          storeUploadCancel={storeUploadCancel}
-          replacePictureURL={replacePictureURL} />
+        {Object.keys(map)
+          .map(token => <Picture token={token} onRemovePicture={onRemovePicture} key={token} />)}
       </section>
     )
   }

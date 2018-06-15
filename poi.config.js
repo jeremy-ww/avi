@@ -1,5 +1,7 @@
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
+const RenameWebpackPlugin = require('rename-webpack-plugin')
 const { name, description } = require('./package.json')
+const OfflinePlugin = require('offline-plugin')
+const config = require('./config')
 
 class GithubPagesWebpackPlugin {
   apply (compiler) {
@@ -10,11 +12,14 @@ class GithubPagesWebpackPlugin {
   }
 }
 
+const RELEASE_TIME = Date.now()
+
 module.exports = (options, req) => ({
   port: 80,
   entry: './src/main.js',
   env: {
-    RELEASE_TIME: Date.now()
+    RELEASE_TIME,
+    ...config
   },
   babel: {
     cacheDirectory: true,
@@ -26,13 +31,12 @@ module.exports = (options, req) => ({
     require('poi-preset-react')()
   ],
   webpack (config) {
-    config.plugins.push(new SWPrecacheWebpackPlugin({
-      cacheId: name,
-      navigateFallback: 'https://avi.run/index.html',
-      filename: 'sw.js',
-      minify: true
+    config.plugins.push(new RenameWebpackPlugin({
+      originNameReg: /locales\/(.*)\/(.*)\.json/g,
+      targetName: `locales/$1/$2.${RELEASE_TIME}.json`
     }))
     config.plugins.push(new GithubPagesWebpackPlugin())
+    config.plugins.push(new OfflinePlugin())
     return config
   },
   html: {

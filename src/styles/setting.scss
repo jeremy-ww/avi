@@ -1,0 +1,68 @@
+.setting {
+  padding-top: 5%;
+  padding-bottom: 10%;
+  display: flex;
+  min-height: 100%;
+
+  .container {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    width: 70%;
+
+    .user-info {
+
+      > p {
+        margin: 0;
+        padding-top: 10px;
+        display: flex;
+        color: rgba(0, 0, 0, 0.65);
+        
+        span {
+          font-weight: 200;
+        }
+
+        span:first-of-type {
+          width: 100px;
+        }
+      }
+    }
+
+    .setting-table {
+
+      > div {
+        display: flex;
+        align-items: center;
+
+        > div:first-of-type {
+          width: 160px;
+          color: rgba(0, 0, 0, 0.65);
+        }
+
+        &:not(:first-of-type) {
+          padding-top: 15px;
+        }
+      }
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+      margin: 0 15px;
+    }
+  }
+
+  .source-code {
+
+    a {
+      text-decoration: underline;
+    }
+
+    span {
+      padding: 0 10px;
+      color: #fff;
+    }
+  }
+}

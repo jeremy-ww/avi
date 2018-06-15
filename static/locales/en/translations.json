@@ -12,24 +12,48 @@
   },
   "home": {
     "title": "Click or drag image to this area to upload",
-    "description": "Supports right-pasting image link or image file uploads. Please do not upload company or other privacy images"
+    "description": "Support for pasting image links and image file uploads anywhere, <1> Do not upload company or other private images</1>"
   },
   "records": {
-    "empty": "Emmmm, Here is the barrens"
+    "empty": "Emmmm, Here is the barrens",
+    "ocr": {
+      "fail": "Failure to identify pictures may be due to oversize pictures"
+    }
   },
   "setting": {
-    "cloud": {
-      "tips": "The picture will be uploaded to the sm.ms cloud storage by default",
-      "resource": "Resource",
-      "prefix": "Website Prefix",
-      "default": "default",
-      "qiniu": "Qiniu Cloud",
-      "upyun": "Upyun Cloud",
-      "aliyun": "Aliyun OSS",
-      "tencent": "Tecent COS",
-      "aws": "Amazon S3",
-      "imgur": "Imgur",
-      "flickr": "Flickr"
+    "save": {
+      "success": "Setting save success",
+      "fail": "Setting save failure"
+    },
+    "alert": "Before using AVI, be sure to <1>read the instructions first</1>.",
+    "common": {
+      "warn": "#terms-and-conditions",
+      "user": {
+        "title": "User Info",
+        "id": "User ID",
+        "name": "User Name",
+        "logout": "Logout"
+      },
+      "setting": {
+        "title": "Client Setting",
+        "preference": "Default Upload Server",
+        "format": "Markdown Format"
+      },
+      "cloud": {
+        "title": "Cloud Setting",
+        "tips": "The picture will be uploaded to the sm.ms cloud storage by default",
+        "validate": "Please input your {{field}}",
+        "grant": "In order to open {{name}} storage, you need to allow {{name}} to authorize Avi",
+        "greet": "User <1>{{name}}</1> is logged in",
+        "logout": "I want logout",
+        "submit": "Submit"
+      },
+      "source": {
+        "title": "Source Code",
+        "code": "Source Code",
+        "client": "Client",
+        "server": "Server"
+      }
     }
   },
   "copy": {
@@ -41,9 +65,12 @@
     "error": "Copy url failed, Must manually click on the picture to complete the copy url"
   },
   "upload": {
-    "tips": "Uploading"
+    "tips": "Uploading",
+    "success": "Upload picture success",
+    "fail": "Upload failed, May be the reason for cloud storage configuration"
   },
   "auth": {
-    "error": "Failed to get permission"
+    "error": "Failed to get permission",
+    "tips": "Avi requires Google authorization to use custom cloud storage services"
   }
 }
