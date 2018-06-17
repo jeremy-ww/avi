@@ -20,16 +20,7 @@
   "setting": {
     "cloud": {
       "tips": "The picture will be uploaded to the sm.ms cloud storage by default",
-      "resource": "Resource",
-      "prefix": "Website Prefix",
-      "default": "default",
-      "qiniu": "Qiniu Cloud",
-      "upyun": "Upyun Cloud",
-      "aliyun": "Aliyun OSS",
-      "tencent": "Tecent COS",
-      "aws": "Amazon S3",
-      "imgur": "Imgur",
-      "flickr": "Flickr"
+      "validate": "Please input your {{field}}"
     }
   },
   "copy": {

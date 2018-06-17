@@ -20,16 +20,7 @@
   "setting": {
     "cloud": {
       "tips": "图片默认存储在 sm.ms 的云存储上",
-      "resource": "资源",
-      "prefix": "网址前缀",
-      "default": "默认",
-      "qiniu": "七牛云",
-      "upyun": "又拍云",
-      "aliyun": "阿里云 OSS",
-      "tencent": "腾讯云 COS",
-      "aws": "亚马逊 S3",
-      "imgur": "Imgur",
-      "flickr": "Flickr"
+      "validate": "请输入 {{field}} 字段"
     }
   },
   "copy": {
