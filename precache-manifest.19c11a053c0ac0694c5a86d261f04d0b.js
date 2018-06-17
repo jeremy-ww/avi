@@ -8,16 +8,8 @@ self.__precacheManifest = [
     "url": "/vendor.e41d9424.js"
   },
   {
-    "revision": "28ba4226956f5af773933f2322f11f4c",
+    "revision": "53d93406b31abe3741e48d3f30793497",
     "url": "/index.html"
-  },
-  {
-    "revision": "6d00560d2986fc217893a0652bc2f04d",
-    "url": "/homescreen-96.png"
-  },
-  {
-    "revision": "9564b538a0465d637cbccb22d0be55b1",
-    "url": "/locales/en/translations.json"
   },
   {
     "revision": "ddb298f8ef632ef07802a3dd850deaf3",
@@ -28,32 +20,40 @@ self.__precacheManifest = [
     "url": "/vendor.3b918fd2.css"
   },
   {
-    "revision": "2833188940609fc1bfa25cbc06384b82",
-    "url": "/homescreen-192.png"
+    "revision": "928763e27fa6ee915004570ed48b372f",
+    "url": "/homescreen-144.png"
   },
   {
     "revision": "aacbd614a98ef8be5123",
     "url": "/client.aacbd614.js"
   },
   {
+    "revision": "9564b538a0465d637cbccb22d0be55b1",
+    "url": "/locales/en/translations.json"
+  },
+  {
+    "revision": "6d00560d2986fc217893a0652bc2f04d",
+    "url": "/homescreen-96.png"
+  },
+  {
     "revision": "ef996c580ad48ba587f53b522a4053fc",
     "url": "/homescreen-72.png"
   },
   {
-    "revision": "25ef2810b4ef46e56c79cd15066d8ae5",
-    "url": "/homescreen-168.png"
+    "revision": "aacbd614a98ef8be5123",
+    "url": "/client.eb5fe52a.css"
   },
   {
     "revision": "805830c4d48151b31a29b57f73d242b9",
     "url": "/favicon.ico"
   },
   {
-    "revision": "928763e27fa6ee915004570ed48b372f",
-    "url": "/homescreen-144.png"
+    "revision": "2833188940609fc1bfa25cbc06384b82",
+    "url": "/homescreen-192.png"
   },
   {
-    "revision": "aacbd614a98ef8be5123",
-    "url": "/client.290ec9c1.css"
+    "revision": "25ef2810b4ef46e56c79cd15066d8ae5",
+    "url": "/homescreen-168.png"
   },
   {
     "revision": "197b2fcc9aaa3c0e0effc377440d7d8d",
