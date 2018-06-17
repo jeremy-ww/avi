@@ -8,7 +8,7 @@ self.__precacheManifest = [
     "url": "/vendor.e41d9424.js"
   },
   {
-    "revision": "6efd28c15321d49af8f23f18d57b069a",
+    "revision": "28ba4226956f5af773933f2322f11f4c",
     "url": "/index.html"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/vendor.3b918fd2.css"
   },
   {
-    "revision": "25ef2810b4ef46e56c79cd15066d8ae5",
-    "url": "/homescreen-168.png"
+    "revision": "2833188940609fc1bfa25cbc06384b82",
+    "url": "/homescreen-192.png"
   },
   {
     "revision": "aacbd614a98ef8be5123",
@@ -40,20 +40,20 @@ self.__precacheManifest = [
     "url": "/homescreen-72.png"
   },
   {
-    "revision": "2833188940609fc1bfa25cbc06384b82",
-    "url": "/homescreen-192.png"
-  },
-  {
-    "revision": "928763e27fa6ee915004570ed48b372f",
-    "url": "/homescreen-144.png"
+    "revision": "25ef2810b4ef46e56c79cd15066d8ae5",
+    "url": "/homescreen-168.png"
   },
   {
     "revision": "805830c4d48151b31a29b57f73d242b9",
     "url": "/favicon.ico"
   },
   {
+    "revision": "928763e27fa6ee915004570ed48b372f",
+    "url": "/homescreen-144.png"
+  },
+  {
     "revision": "aacbd614a98ef8be5123",
-    "url": "/client.8dfad88d.css"
+    "url": "/client.290ec9c1.css"
   },
   {
     "revision": "197b2fcc9aaa3c0e0effc377440d7d8d",
