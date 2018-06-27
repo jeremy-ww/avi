@@ -18,13 +18,31 @@
     "empty": "Emmmm, Here is the barrens"
   },
   "setting": {
-    "cloud": {
-      "tips": "The picture will be uploaded to the sm.ms cloud storage by default",
-      "validate": "Please input your {{field}}"
-    },
     "save": {
       "success": "Setting save success",
       "fail": "Setting save failure"
+    },
+    "common": {
+      "user": {
+        "title": "User Info",
+        "id": "User ID",
+        "name": "User Name"
+      },
+      "setting": {
+        "title": "Client Setting",
+        "preference": "Default Upload Server"
+      },
+      "cloud": {
+        "title": "Cloud Setting",
+        "tips": "The picture will be uploaded to the sm.ms cloud storage by default",
+        "validate": "Please input your {{field}}"
+      },
+      "source": {
+        "title": "Source Code",
+        "code": "Source Code",
+        "client": "Client",
+        "server": "Server"
+      }
     }
   },
   "copy": {

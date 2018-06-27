@@ -18,13 +18,31 @@
     "empty": "看起来, 这里空无一物"
   },
   "setting": {
-    "cloud": {
-      "tips": "图片默认存储在 sm.ms 的云存储上",
-      "validate": "请输入 {{field}} 字段"
-    },
     "save": {
       "success": "设置保存成功",
       "fail": "设置保存失败"
+    },
+    "common": {
+      "user": {
+        "title": "用户信息",
+        "id": "用户 ID",
+        "name": "User Name"
+      },
+      "setting": {
+        "title": "客户端设置",
+        "preference": "默认云存储"
+      },
+      "cloud": {
+        "title": "云存储设置",
+        "tips": "图片默认存储在 sm.ms 的云存储上",
+        "validate": "请输入 {{field}} 字段"
+      },
+      "source": {
+        "title": "源代码",
+        "code": "源代码",
+        "client": "客户端",
+        "server": "服务端"
+      }
     }
   },
   "copy": {
