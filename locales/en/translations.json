@@ -21,6 +21,10 @@
     "cloud": {
       "tips": "The picture will be uploaded to the sm.ms cloud storage by default",
       "validate": "Please input your {{field}}"
+    },
+    "save": {
+      "success": "Setting save success",
+      "fail": "Setting save failure"
     }
   },
   "copy": {

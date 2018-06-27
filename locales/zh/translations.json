@@ -21,6 +21,10 @@
     "cloud": {
       "tips": "图片默认存储在 sm.ms 的云存储上",
       "validate": "请输入 {{field}} 字段"
+    },
+    "save": {
+      "success": "设置保存成功",
+      "fail": "设置保存失败"
     }
   },
   "copy": {
