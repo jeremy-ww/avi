@@ -22,6 +22,7 @@
       "success": "Setting save success",
       "fail": "Setting save failure"
     },
+    "alert": "Before using AVI, be sure to <1>read the instructions first</1>.",
     "common": {
       "user": {
         "title": "User Info",
