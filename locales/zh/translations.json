@@ -26,7 +26,7 @@
       "user": {
         "title": "用户信息",
         "id": "用户 ID",
-        "name": "User Name"
+        "name": "用户名"
       },
       "setting": {
         "title": "客户端设置",
