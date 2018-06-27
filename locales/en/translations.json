@@ -36,7 +36,9 @@
     "error": "Copy url failed, Must manually click on the picture to complete the copy url"
   },
   "upload": {
-    "tips": "Uploading"
+    "tips": "Uploading",
+    "success": "Upload picture success",
+    "fail": "Uploading a picture failure"
   },
   "auth": {
     "error": "Failed to get permission",
