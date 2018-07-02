@@ -24,6 +24,7 @@
     },
     "alert": "Before using AVI, be sure to <1>read the instructions first</1>.",
     "common": {
+      "warn": "#terms-and-conditions",
       "user": {
         "title": "User Info",
         "id": "User ID",
@@ -36,7 +37,9 @@
       "cloud": {
         "title": "Cloud Setting",
         "tips": "The picture will be uploaded to the sm.ms cloud storage by default",
-        "validate": "Please input your {{field}}"
+        "validate": "Please input your {{field}}",
+        "herald": "This service will be opened soon",
+        "submit": "Submit"
       },
       "source": {
         "title": "Source Code",
@@ -57,7 +60,7 @@
   "upload": {
     "tips": "Uploading",
     "success": "Upload picture success",
-    "fail": "Uploading a picture failure"
+    "fail": "Upload failed, May be the reason for cloud storage configuration"
   },
   "auth": {
     "error": "Failed to get permission",

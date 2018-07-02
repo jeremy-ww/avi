@@ -24,6 +24,7 @@
     },
     "alert": "使用 AVI 之前, 请先务必 <1>阅读使用说明</1>.",
     "common": {
+      "warn": "/blob/master/README.zh.md#使用须知",
       "user": {
         "title": "用户信息",
         "id": "用户 ID",
@@ -36,7 +37,9 @@
       "cloud": {
         "title": "云存储设置",
         "tips": "图片默认存储在 sm.ms 的云存储上",
-        "validate": "请输入 {{field}} 字段"
+        "validate": "请输入 {{field}} 字段",
+        "herald": "此服务即将到来...",
+        "submit": "提交"
       },
       "source": {
         "title": "源代码",
@@ -57,7 +60,7 @@
   "upload": {
     "tips": "上传中",
     "success": "上传图片成功",
-    "fail": "上传图片失败"
+    "fail": "上传图片失败, 可能是云存储配置不对"
   },
   "auth": {
     "error": "获取权限失败",
