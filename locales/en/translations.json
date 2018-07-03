@@ -38,7 +38,8 @@
         "title": "Cloud Setting",
         "tips": "The picture will be uploaded to the sm.ms cloud storage by default",
         "validate": "Please input your {{field}}",
-        "herald": "This service will be opened soon",
+        "grant": "In order to open {{name}} storage, you need to allow {{name}} to authorize Avi",
+        "herald": "This service will be opened soon.",
         "submit": "Submit"
       },
       "source": {
