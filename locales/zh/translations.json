@@ -39,6 +39,8 @@
         "tips": "图片默认存储在 sm.ms 的云存储上",
         "validate": "请输入 {{field}} 字段",
         "grant": "为了开启 {{name}} 存储, 需要允许 {{name}} 授权给 Avi",
+        "greet": "用户 <1>{{name}}</1> 正在登录状态",
+        "logout": "我想要退出登录",
         "herald": "此服务即将到来...",
         "submit": "提交"
       },
