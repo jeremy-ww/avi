@@ -28,7 +28,8 @@
       "user": {
         "title": "用户信息",
         "id": "用户 ID",
-        "name": "用户名"
+        "name": "用户名",
+        "logout": "退出登录"
       },
       "setting": {
         "title": "客户端设置",

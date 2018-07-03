@@ -28,7 +28,8 @@
       "user": {
         "title": "User Info",
         "id": "User ID",
-        "name": "User Name"
+        "name": "User Name",
+        "logout": "Logout"
       },
       "setting": {
         "title": "Client Setting",
