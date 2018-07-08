@@ -12,7 +12,7 @@
   },
   "home": {
     "title": "Click or drag image to this area to upload",
-    "description": "Supports right-pasting image link or image file uploads. <1>Please do not upload company or other privacy images</1>"
+    "description": "Support for pasting image links and image file uploads anywhere, <1> Do not upload company or other private images</1>"
   },
   "records": {
     "empty": "Emmmm, Here is the barrens",

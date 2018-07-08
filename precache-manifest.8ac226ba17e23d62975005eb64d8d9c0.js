@@ -8,12 +8,12 @@ self.__precacheManifest = [
     "url": "/vendor.2ec27efe.js"
   },
   {
-    "revision": "076ef71f8a75e36fc0cbd433b9b085f0",
+    "revision": "41265bb0be8523336c03f5b8505d3726",
     "url": "/index.html"
   },
   {
-    "revision": "e7fefd19ef083ef44065ac9207cb1620",
-    "url": "/locales/zh/translations.1530970814258.json"
+    "revision": "d6d03f3e5a2c182075a92791c7fb5a03",
+    "url": "/locales/zh/translations.1531046398520.json"
   },
   {
     "revision": "2ec27efef41a3317b5b7",
@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "/homescreen-144.png"
   },
   {
-    "revision": "7c625a62e967a504ebfa",
-    "url": "/client.7c625a62.js"
+    "revision": "0859c48144e681af90c1",
+    "url": "/client.0859c481.js"
   },
   {
-    "revision": "7fce784368c9db15c4574fa6b1a621c2",
-    "url": "/locales/en/translations.1530970814258.json"
+    "revision": "caf10e961562f6e546a4bf50d56d2d0a",
+    "url": "/locales/en/translations.1531046398520.json"
   },
   {
     "revision": "6d00560d2986fc217893a0652bc2f04d",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/homescreen-72.png"
   },
   {
-    "revision": "7c625a62e967a504ebfa",
+    "revision": "0859c48144e681af90c1",
     "url": "/client.d9806d48.css"
   },
   {
