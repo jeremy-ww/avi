@@ -1,0 +1,76 @@
+{
+  "title": "Avi - 支持多种云存储的上传工具.",
+  "menu": {
+    "home": "主页",
+    "records": "记录",
+    "setting": "设置",
+    "theme": {
+      "label": "主题",
+      "dark": "夜间",
+      "light": "明亮"
+    }
+  },
+  "home": {
+    "title": "点击或者拖拽图片到此处上传",
+    "description": "支持任意位置粘贴图片链接、图片文件方式上传, <1>请勿上传公司或者其他隐私图片</1>"
+  },
+  "records": {
+    "empty": "看起来, 这里空无一物",
+    "ocr": {
+      "fail": "识别图片失败, 可能原因是图片体积过大"
+    }
+  },
+  "setting": {
+    "save": {
+      "success": "设置保存成功",
+      "fail": "设置保存失败"
+    },
+    "alert": "使用 AVI 之前, 请先务必 <1>阅读使用说明</1>.",
+    "common": {
+      "warn": "/blob/master/README.zh.md#使用须知",
+      "user": {
+        "title": "用户信息",
+        "id": "用户 ID",
+        "name": "用户名",
+        "logout": "退出登录"
+      },
+      "setting": {
+        "title": "客户端设置",
+        "preference": "默认云存储"
+      },
+      "cloud": {
+        "title": "云存储设置",
+        "tips": "图片默认存储在 sm.ms 的云存储上",
+        "validate": "请输入 {{field}} 字段",
+        "grant": "为了开启 {{name}} 存储, 需要允许 {{name}} 授权给 Avi",
+        "greet": "用户 <1>{{name}}</1> 正在登录状态",
+        "logout": "我想要退出登录",
+        "herald": "此服务即将到来...",
+        "submit": "提交"
+      },
+      "source": {
+        "title": "源代码",
+        "code": "源代码",
+        "client": "客户端",
+        "server": "服务端"
+      }
+    }
+  },
+  "copy": {
+    "copied": "已复制",
+    "failure": {
+      "title": "复制链接失败",
+      "description": "浏览器权限不足, 必须要手动点击图片才能完成复制"
+    },
+    "error": "复制 URL 失败, 必须要手动点击图片才能完成复制"
+  },
+  "upload": {
+    "tips": "上传中",
+    "success": "上传图片成功",
+    "fail": "上传图片失败, 可能是云存储配置不对"
+  },
+  "auth": {
+    "error": "获取权限失败",
+    "tips": "Avi 需要登录 Google 账户以获取自定义存储的能力"
+  }
+}
