@@ -45,7 +45,6 @@
         "grant": "In order to open {{name}} storage, you need to allow {{name}} to authorize Avi",
         "greet": "User <1>{{name}}</1> is logged in",
         "logout": "I want logout",
-        "herald": "This service will be opened soon.",
         "submit": "Submit"
       },
       "source": {
