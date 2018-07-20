@@ -13,7 +13,7 @@ export default new class User {
 
   @observable
   options = {
-    preference: undefined,
+    preference: 'smms',
     markdown: false
   }
 
