@@ -2,7 +2,7 @@
 
 > Lightweight and simple pictures uploading tool supports multiple cloud storage. Support uploading pictures by image link, picture file, QQ screenshot, etc.
 
-[![Build Status](https://img.shields.io/circleci/project/github/Army-U/avi.svg?style=flat-square)](https://circleci.com/gh/Army-U/avi) [![npm package](https://img.shields.io/npm/v/avi.svg?style=flat-square)](https://www.npmjs.com/package/avi)
+[![Build Status](https://flat.badgen.net/circleci/github/Army-U/avi/master)](https://circleci.com/gh/Army-U/avi) [![npm package](https://flat.badgen.net/npm/v/avi)](https://www.npmjs.com/package/avi)
 
 [中文文档](https://docs.avi.run/#/zh-cn/) | [中文版](https://avi.run?lng=zh) | [中文 README](README.zh.md)
 
