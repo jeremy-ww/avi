@@ -30,7 +30,8 @@ const StorageFormItem = function (field, secrets = {}, getFieldDecorator) {
   )
 }
 
-class CloudStorageForm extends React.Component {
+@Form.create()
+export default class CloudStorageForm extends React.Component {
   static propTypes = {
     fields: PropTypes.array,
     form: PropTypes.object,
@@ -92,5 +93,3 @@ class CloudStorageForm extends React.Component {
     element.removeEventListener('paste', disableDetectPaste)
   }
 }
-
-export default Form.create()(CloudStorageForm)
